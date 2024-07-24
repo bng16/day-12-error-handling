@@ -1,31 +1,43 @@
-let errorFirst=()=>{
-    try{
+// let errorFirst=()=>{
+//     try{
 
-        throw new Error("the numbers are undefine");
-        return a+b;
+//         throw new Error("the numbers are undefine");
+//         return a+b;
 
-    }catch(e){
-        console.log(e);
+//     }catch(e){
+//         console.log(e);
+//     }
+// };
+
+// errorFirst();
+
+// let error2=(a,b)=>{
+//     try{
+//         if(b!==0){
+//             return a/b
+//         }
+//         else{
+//             throw new Error("divided by zero error");
+//         }
+//     }catch(e){
+//         return e;
+//     }
+// };
+
+// console.log(error2(1,2));
+// console.log(error2(1,0));
+
+
+
+const error3=() => {
+    try {
+        console.log("in try");
+        throw new Error("error 4");
+        console.log("this will not print");
+    }catch{
+        console.log("in catch");
+    }finally{
+        console.log("in finally");
     }
 };
-
-errorFirst();
-
-let error2=(a,b)=>{
-    try{
-        if(b!==0){
-            return a/b
-        }
-        else{
-            throw new Error("divided by zero error");
-        }
-    }catch(e){
-        return e;
-    }
-};
-
-console.log(error2(1,2));
-console.log(error2(1,0));
-
-
-
+error3();
