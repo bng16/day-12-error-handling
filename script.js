@@ -43,17 +43,34 @@
 // error3();
 
 
-let error5= input =>{
-    try{
-        if (input.length >0) {
-            console.log("THE INPUT TEXT IS NOT EMPTY");
+// let error5= input =>{
+//     try{
+//         if (input.length >0) {
+//             console.log("THE INPUT TEXT IS NOT EMPTY");
+//         }else{
+//             throw new Error("THE INPUT TEXT IS EMPTY");
+//         }
+//     }catch(e){
+//         console.log(e);
+//     }
+// }
+
+// error5('hi');
+// error5('');
+
+
+let error6=()=>{
+    return new Promise((resolve, reject) => {
+        const rndNum=Math.floor(Math.random()*2);
+        console.log(rndNum);
+        if (rndNum < 1) {
+            reject(new Error("the number is 0"));
         }else{
-            throw new Error("THE INPUT TEXT IS EMPTY");
+            resolve(rndNum);
         }
-    }catch(e){
-        console.log(e);
-    }
+    })
 }
 
-error5('hi');
-error5('');
+error6().catch((err) => {
+    console.log(err+" so please refresh");
+})
