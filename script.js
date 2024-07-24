@@ -29,15 +29,31 @@
 
 
 
-const error3=() => {
-    try {
-        console.log("in try");
-        throw new Error("error 4");
-        console.log("this will not print");
-    }catch{
-        console.log("in catch");
-    }finally{
-        console.log("in finally");
+// const error3=() => {
+//     try {
+//         console.log("in try");
+//         throw new Error("error 4");
+//         console.log("this will not print");
+//     }catch{
+//         console.log("in catch");
+//     }finally{
+//         console.log("in finally");
+//     }
+// };
+// error3();
+
+
+let error5= input =>{
+    try{
+        if (input.length >0) {
+            console.log("THE INPUT TEXT IS NOT EMPTY");
+        }else{
+            throw new Error("THE INPUT TEXT IS EMPTY");
+        }
+    }catch(e){
+        console.log(e);
     }
-};
-error3();
+}
+
+error5('hi');
+error5('');
